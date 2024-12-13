@@ -19,9 +19,13 @@ from django.urls import path
 from first_app.views import index_page
 from time_app.views import time_page
 from calc_app.views import calc_page
+from expression.views import expression_page
+from history.views import history_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
     path('time/', time_page),
-    path('calc/', calc_page)
+    path('calc/', calc_page),
+    path('expression/', expression_page),
+    path('history/', history_page)
 ]

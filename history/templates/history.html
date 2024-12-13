@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header>
+        <a href="/">Главная</a>
+        <a href="/time">Время</a>
+        <a href="/calc">Калькулятор</a>
+        <a href="/history">История</a>
+        <a href="/expression"> рандомные вычисления</a>
+</header>
+<body>
+    <h1>История вычислений</h1>
+    <table>
+        <tr>
+            <th>number</th>
+            <th>operation</th>
+            <th>number</th>
+            <th>operation</th>
+            <th>number</th>
+            <th>operation</th>
+            <th>number</th>
+            <th> equals</th>
+            <th>result</th>
+        </tr>
+        {% for item in cals_history %}
+            <tr>
+                <th>{{item.first_number}}</th>
+                <th>{{item.first_operation}}</th>
+                <th>{{item.second_number}}</th>
+                <th>{{item.second_operation}}</th>
+                <th>{{item.third_number}}</th>
+                <th>{{item.third_operation}}</th>
+                <th>{{item.four_number}}</th>
+                <th>=</th>
+                <th>{{item.result}} </th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
