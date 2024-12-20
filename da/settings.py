@@ -55,7 +55,7 @@ ROOT_URLCONF = 'da.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['first_app', 'time_app', 'calc_app', 'expression', 'history', 'delete', 'clear'],
+        'DIRS': ['first_app', 'time_app', 'calc_app', 'expression', 'history', 'delete', 'clear', 'new'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
