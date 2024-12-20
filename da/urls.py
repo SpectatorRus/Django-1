@@ -22,6 +22,7 @@ from calc_app.views import calc_page
 from expression.views import expression_page
 from history.views import history_page
 from delete.views import delete_page
+from clear.views import clear_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
@@ -29,5 +30,6 @@ urlpatterns = [
     path('calc/', calc_page),
     path('expression/', expression_page),
     path('history/', history_page),
-    path('delete/', delete_page)
+    path('delete/', delete_page),
+    path('clear/', clear_page)
 ]
