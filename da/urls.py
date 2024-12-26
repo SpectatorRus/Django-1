@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from first_app.views import index_page
 from new.views import new_page
+from str2words.views import str2words_page
 from time_app.views import time_page
 from calc_app.views import calc_page
 from expression.views import expression_page
@@ -33,5 +34,6 @@ urlpatterns = [
     path('history/', history_page),
     path('delete/', delete_page),
     path('clear/', clear_page),
-    path('new/', new_page)
+    path('new/', new_page),
+    path('str2words/', str2words_page)
 ]
