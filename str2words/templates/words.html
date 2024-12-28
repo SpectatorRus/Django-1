@@ -19,5 +19,22 @@
         {% endfor %}
         <button>отправить</button>
     </form>
+    {% if words %}
+        <h2>Все слова</h2>
+        <ul>
+            {% for elem in words %}
+                <li>{{elem}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if numbers %}
+        <h2>Все числа</h2>
+        <ul>
+            {% for elem in numbers %}
+                <li>{{elem}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 </html>

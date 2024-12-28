@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'expression'
+    'expression',
+    'str2words'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'da.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['first_app', 'time_app', 'calc_app', 'expression', 'history', 'delete', 'clear', 'new', 'str2words'],
+        'DIRS': ['first_app', 'time_app', 'calc_app', 'expression', 'history', 'delete', 'clear', 'new', 'str2words', 'auth/templates', 'logout', 'str_history'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +123,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/auth'

@@ -25,6 +25,12 @@ from expression.views import expression_page
 from history.views import history_page
 from delete.views import delete_page
 from clear.views import clear_page
+from auth.views import auth_page
+from logout.views import logout_page
+from str_history.views import str_history
+
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
@@ -35,5 +41,8 @@ urlpatterns = [
     path('delete/', delete_page),
     path('clear/', clear_page),
     path('new/', new_page),
-    path('str2words/', str2words_page)
+    path('str2words/', str2words_page),
+    path('auth/', auth_views.LoginView.as_view()),
+    path('logout/', logout_page),
+    path('str_history/', str_history)
 ]

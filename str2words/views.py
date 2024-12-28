@@ -1,18 +1,29 @@
+from typing import List
+
 from django.shortcuts import render
 from str2words.forms import Str2Words
 
+from django.contrib.auth.decorators import login_required
 
-def count_numbers(data: list ) -> int:
+from str2words.models import Word
+import datetime
+
+
+def count_numbers(data: list) -> list[int | list[int]]:
     count = 0
+    numbers_list = []
     for i in data:
         try:
             i = int(i)
+            numbers_list.append(int(i))
             count += 1
         except ValueError:
             pass
-    return count
+    return [count, numbers_list]
+
 
 # Create your views here.
+@login_required
 def str2words_page(request):
     context = {
         'str2words_form': Str2Words()
@@ -27,5 +38,17 @@ def str2words_page(request):
     words = data_form.cleaned_data["words"].split()
     words_count = len(words)
     numbers_count = count_numbers(words)
-    print(words_count, numbers_count)
+    date = datetime.date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+    time = datetime.time(datetime.datetime.now().hour, datetime.datetime.now().minute, datetime.datetime.now().second)
+    word = Word(
+        date=date,
+        time=time,
+        inputtedString=data_form.cleaned_data["words"],
+        words_count=words_count,
+        symbols_count=len(data_form.cleaned_data["words"]),
+        user=request.user
+    )
+    word.save()
+    context["words"] = words
+    context["numbers"] = numbers_count[1]
     return render(request, 'templates/words.html', context)

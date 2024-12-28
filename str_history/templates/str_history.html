@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+           border-spacing: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>История "слов"</h1>
+    <table>
+        <tr>
+            <th>дата</th>
+            <th>время</th>
+            <th>исходная строка</th>
+            <th>количество слов в строке</th>
+            <th>количество символов в строке</th>
+            <th>пользователь</th>
+        </tr>
+        {% for item in word %}
+            <tr>
+                <th>{{item.date}}</th>
+                <th>{{item.time}}</th>
+                <th>{{item.inputtedString}}</th>
+                <th>{{item.words_count}}</th>
+                <th>{{item.symbols_count}}</th>
+                <th>{{item.user.username}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
