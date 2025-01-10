@@ -12,4 +12,4 @@ def clear_page(request):
     except Exception:
         status = "что-то не захотелось удаляться :)"
 
-    return render(request, "templates/clear.html", context={"status": status})
+    return render(request, "clear.html", context={"status": status})

@@ -1,27 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>time is up</title>
-</head>
-<header>
-        <a href="/">Главная</a>
-        <a href="/time">Время</a>
-        <a href="/calc">Калькулятор</a>
-        <a href="/history">История</a>
-        <a href="/expression"> рандомные вычисления</a>
-        <a href="/delete">удалить последнее вычисление</a>
-        <a href="/clear">удалить всю историю</a>
-        <a href="/new">добавить свой пример</a>
-</header>
-<body>
-    <h1>Курс "Промышленное программирование"</h1>
-    <ul>
-        <li>{{date}}</li>
-        <li>{{time}}</li>
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h3>Курс "Промышленное программирование"</h3>
+        <ul>
+            <li>{{date}}</li>
+            <li>{{time}}</li>
+        </ul>
+    </div>
+{% endblock %}

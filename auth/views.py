@@ -25,6 +25,7 @@ def auth_page(request):
         login(request, user)
         return redirect('/')
     else:
+        print(context)
         context["status"] = "пользователь не найден"
-        return render(request, 'registration/login.html', context)
+        return render(request, 'login.html', context)
 

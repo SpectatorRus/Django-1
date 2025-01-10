@@ -14,4 +14,4 @@ def delete_page(request):
     except Exception:
         status = "что-то пошло не так :("
 
-    return render(request, 'templates/delete.html', context={"status": status})
+    return render(request, 'delete.html', context={"status": status})

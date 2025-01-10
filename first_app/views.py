@@ -7,4 +7,4 @@ def index_page(request):
         "name": 'Alexander',
         "page_count": len(urlpatterns)-1
     }
-    return render(request, "templates/index.html", context)
+    return render(request, "index.html", context)

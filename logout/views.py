@@ -7,4 +7,4 @@ def logout_page(request):
     if request.POST:
         logout(request)
         return redirect('/auth')
-    return render(request, 'templates/logout.html', {})
+    return render(request, 'logout.html', {})

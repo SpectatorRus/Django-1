@@ -8,4 +8,4 @@ def time_page(request):
         "time": time,
         "date": date
     }
-    return render(request, 'templates/time.html', context)
+    return render(request, 'time.html', context)

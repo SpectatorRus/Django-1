@@ -23,7 +23,7 @@ def new_page(request):
     status = ""
     if len(numbers) != 7:
         status = "должно быть 7 аргументов"
-        return render(request, 'templates/new.html', context={"status": status})
+        return render(request, 'new.html', context={"status": status})
     for i in numbers:
         try:
             numbers_int_list.append(int(numbers[i]))
@@ -32,7 +32,7 @@ def new_page(request):
                 operation.append(operation_dict[numbers[i][0]])
             else:
                 status = f"недопустимый аргумент: {i} - '{numbers[i]}'не служебное слово(a,s), и не число(int)"
-                return render(request, 'templates/new.html', context={"status": status})
+                return render(request, 'new.html', context={"status": status})
 
     result = numbers_int_list[0]
     print(numbers_int_list, result, operation)
@@ -54,4 +54,4 @@ def new_page(request):
     calc_history.save()
 
     status = "пример добавлен"
-    return render(request, 'templates/new.html', context={"status": status})
+    return render(request, 'new.html', context={"status": status})

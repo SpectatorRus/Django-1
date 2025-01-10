@@ -10,4 +10,4 @@ def str_history(request):
         'word': objects
     }
 
-    return render(request, 'templates/str_history.html', context)
+    return render(request, 'str_history.html', context)

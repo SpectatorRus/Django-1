@@ -22,4 +22,4 @@ def calc_page(request):
         "second_num": second_num,
         "summa": summa
     }
-    return render(request, 'templates/calc.html', context)
+    return render(request, 'calc.html', context)

@@ -51,4 +51,4 @@ def str2words_page(request):
     word.save()
     context["words"] = words
     context["numbers"] = numbers_count[1]
-    return render(request, 'templates/words.html', context)
+    return render(request, 'words.html', context)

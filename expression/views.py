@@ -43,4 +43,4 @@ def expression_page(request):
         "result": result
     }
     print(numbers, operation_char, result)
-    return render(request, 'templates/expression.html', context)
+    return render(request, 'expression.html', context)

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Write your words</title>
-</head>
-<body>
+{% extends "base.html" %}
 
+{% block content %}
     <form method="post" action="">
         {% csrf_token %}
 
@@ -36,5 +31,4 @@
             {% endfor %}
         </ul>
     {% endif %}
-</body>
-</html>
+{% endblock %}

@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<header>
-        <a href="/">Главная</a>
-        <a href="/time">Время</a>
-        <a href="/calc">Калькулятор</a>
-        <a href="/history">История</a>
-        <a href="/expression"> рандомные вычисления</a>
-        <a href="/delete">удалить последнее вычисление</a>
-        <a href="/clear">удалить всю историю</a>
-        <a href="/new">добавить свой пример</a>
-</header>
-<body>
-    <p>{{status}}</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h3>{{status}}</h3>
+{% endblock %}

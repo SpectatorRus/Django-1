@@ -1,46 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<header>
-        <a href="/">Главная</a>
-        <a href="/time">Время</a>
-        <a href="/calc">Калькулятор</a>
-        <a href="/history">История</a>
-        <a href="/expression"> рандомные вычисления</a>
-        <a href="/delete">удалить последнее вычисление</a>
-        <a href="/clear">удалить всю историю</a>
-        <a href="/new">добавить свой пример</a>
-</header>
-<body>
-    <h1>История вычислений</h1>
-    <table>
-        <tr>
-            <th>number</th>
-            <th>operation</th>
-            <th>number</th>
-            <th>operation</th>
-            <th>number</th>
-            <th>operation</th>
-            <th>number</th>
-            <th> equals</th>
-            <th>result</th>
-        </tr>
-        {% for item in cals_history %}
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>История вычислений</h1>
+        <table class="table table-dark  table-hover">
             <tr>
-                <th>{{item.first_number}}</th>
-                <th>{{item.first_operation}}</th>
-                <th>{{item.second_number}}</th>
-                <th>{{item.second_operation}}</th>
-                <th>{{item.third_number}}</th>
-                <th>{{item.third_operation}}</th>
-                <th>{{item.four_number}}</th>
-                <th>=</th>
-                <th>{{item.result}} </th>
+                <th scope="col">number</th>
+                <th scope="col">operation</th>
+                <th scope="col">number</th>
+                <th scope="col">operation</th>
+                <th scope="col">number</th>
+                <th scope="col">operation</th>
+                <th scope="col">number</th>
+                <th scope="col"> equals</th>
+                <th scope="col">result</th>
             </tr>
-        {% endfor %}
-    </table>
-</body>
-</html>
+            {% for item in cals_history %}
+                <tr>
+                    <th scope="row">{{item.first_number}}</th>
+                    <td>{{item.first_operation}}</td>
+                    <td>{{item.second_number}}</td>
+                    <td>{{item.second_operation}}</td>
+                    <td>{{item.third_number}}</td>
+                    <td>{{item.third_operation}}</td>
+                    <td>{{item.four_number}}</td>
+                    <td>=</td>
+                    <td>{{item.result}} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
