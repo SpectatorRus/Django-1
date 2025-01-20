@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+from clicker.views import clicker_page
 from first_app.views import index_page
 from new.views import new_page
 from str2words.views import str2words_page
@@ -44,5 +46,6 @@ urlpatterns = [
     path('str2words/', str2words_page),
     path('auth/', auth_views.LoginView.as_view()),
     path('logout/', logout_page),
-    path('str_history/', str_history)
+    path('str_history/', str_history),
+    path('clicker/', clicker_page)
 ]

@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'expression',
-    'str2words'
+    'str2words',
+    'clicker'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATES = [
         'DIRS': ['first_app/templates', 'time_app/templates', 'calc_app/templates', 'expression/templates',
                  'history/templates', 'delete/templates', 'clear/templates', 'new/templates',
                  'str2words', 'auth/templates', 'logout/templates', 'str_history/templates',
-                 'da/base_templates'],
+                 'da/base_templates', 'clicker/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

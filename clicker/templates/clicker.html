@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form method="post" action="#">
+            {% csrf_token %}
+            <input name="hp" id="hp" class="form-control" type="text" value="HP: {{ hp|default:'0' }}" aria-label="Disabled input example" readonly>
+            <input name="iq" id="iq" class="form-control" type="text" value="IQ: {{ iq|default:'0' }}" aria-label="Disabled input example" readonly>
+            <input name="happiness" id="happiness" class="form-control" type="text" value="Happiness: {{ happiness|default:'0' }}" aria-label="Disabled input example" readonly>
+
+            <div style="margin: 20px" class="text-center">
+                <h3>Действия</h3>
+            </div>
+            <div class="container px-4 text-center">
+                <div id="eat" class="col btn btn-primary">Поесть</div>
+                <div id="learn" class="col btn btn-primary">Поучиться</div>
+                <div id="sleep" class="col btn btn-primary">Поспать</div>
+                <div id="doAllGood" class="col btn btn-primary">Сделать всё хорошо</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        document.getElementById('eat').addEventListener('click',() => {
+            let value = parseInt(document.getElementById('hp').value.split(' ')[1])
+            document.getElementById('hp').value = `HP: ${value + 4}`
+        })
+        document.getElementById('learn').addEventListener('click',() => {
+            let value = parseInt(document.getElementById('iq').value.split(' ')[1])
+            document.getElementById('iq').value = `IQ: ${value + 4}`
+        })
+        document.getElementById('sleep').addEventListener('click',() => {
+            let value = parseInt(document.getElementById('happiness').value.split(' ')[1])
+            document.getElementById('happiness').value = `Happiness: ${value + 4}`
+        })
+        document.getElementById('doAllGood').addEventListener('click',() => {
+            let ids = [['eat', 'hp', 'HP'], ['learn', 'iq', 'IQ'], ['sleep', 'happiness', 'Happiness']]
+            ids.forEach(element => {
+                let value = parseInt(document.getElementById(element[1]).value.split(' ')[1])
+                document.getElementById(element[1]).value = `${element[2]}: ${value + 4}`
+            })
+        })
+    </script>
+{% endblock %}
