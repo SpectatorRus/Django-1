@@ -2,6 +2,11 @@ from django.shortcuts import render
 
 
 def calc_page(request):
+    """
+        Складывает числа (first, second) из запроса и возвращает результат пользователю в поле шаблона {{summa}}
+    :param request:
+    :return: render(request, 'calc.html', context)
+    """
     first_num = request.GET.get('first', 0)
     second_num = request.GET.get('second', 0)
     try:

@@ -13,6 +13,15 @@ def subtract(a, b):
 
 
 def new_page(request):
+    """
+        Принимает из параметров запроса 7 аргументов: 4 числа и 3 операции(+, -) \n
+        Записывает результат в :ref:`CalcHistory` \n
+        Если всё хорошо status = "пример добавлен" \n
+        Если не 7 аргументов status = "должно быть 7 аргументов" \n
+        Если недопустимые аргументы status = f"недопустимый аргумент: {i} - '{numbers[i]}'не служебное слово(a,s), и не число(int)" \n
+    :param request:
+    :return: render(request, 'new.html', context={"status": status})
+    """
     numbers = request.GET
     numbers_int_list = []
     operation = []

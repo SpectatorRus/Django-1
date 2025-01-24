@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Документация разработчика &#8212; документация project_Docs 0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=e3d86535"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=5b699b7f"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Документация пользователя" href="%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Документация разработчика<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="id2">
+<h2>Модели<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<section id="calchistory">
+<span id="id3"></span><h3>CalcHistory<a class="headerlink" href="#calchistory" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py class" id="module-expression.models">
+<dt class="sig sig-object py" id="expression.models.CalcHistory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expression.models.</span></span><span class="sig-name descname"><span class="pre">CalcHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#expression.models.CalcHistory" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Используется для сохранения случайной операции на странице <strong>/expression</strong> и созданной пользователем на странице <strong>/new</strong></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="expression.models.CalcHistory.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#expression.models.CalcHistory.DoesNotExist" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="expression.models.CalcHistory.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#expression.models.CalcHistory.MultipleObjectsReturned" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="word">
+<span id="id4"></span><h3>Word<a class="headerlink" href="#word" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py class" id="module-str2words.models">
+<dt class="sig sig-object py" id="str2words.models.Word">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">str2words.models.</span></span><span class="sig-name descname"><span class="pre">Word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#str2words.models.Word" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Используется в <strong>/str2words</strong> для хранения разбора стоки на слова и символы.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="str2words.models.Word.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#str2words.models.Word.DoesNotExist" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="str2words.models.Word.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#str2words.models.Word.MultipleObjectsReturned" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="clickerdata">
+<span id="id5"></span><h3>ClickerData<a class="headerlink" href="#clickerdata" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py class" id="module-clicker.models">
+<dt class="sig sig-object py" id="clicker.models.ClickerData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">clicker.models.</span></span><span class="sig-name descname"><span class="pre">ClickerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#clicker.models.ClickerData" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Используется в <strong>/clicker</strong> для сохранения результатов пользователя.</p>
+<p>hp, iq, happiness - числа</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="clicker.models.ClickerData.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#clicker.models.ClickerData.DoesNotExist" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="clicker.models.ClickerData.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#clicker.models.ClickerData.MultipleObjectsReturned" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="view">
+<h2>view функции<a class="headerlink" href="#view" title="Ссылка на этот заголовок">¶</a></h2>
+<section id="auth">
+<h3>auth<a class="headerlink" href="#auth" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="auth.views.auth_page">
+<span class="sig-prename descclassname"><span class="pre">auth.views.</span></span><span class="sig-name descname"><span class="pre">auth_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth.views.auth_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Принимает из формы Auth username, password и если пользователь с такими данными существует, регестрирует и
+перенаправляет на основную страницу</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>redirect(„/“)|render(request, „login.html“, context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Auth</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>  <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>  <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="logout">
+<h3>logout<a class="headerlink" href="#logout" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="logout.views.logout_page">
+<span class="sig-prename descclassname"><span class="pre">logout.views.</span></span><span class="sig-name descname"><span class="pre">logout_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logout.views.logout_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выход из аккаунта</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>redirect(„/auth“)|render(request, „logout.html“, {})</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="calc-app">
+<h3>calc_app<a class="headerlink" href="#calc-app" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="calc_app.views.calc_page">
+<span class="sig-prename descclassname"><span class="pre">calc_app.views.</span></span><span class="sig-name descname"><span class="pre">calc_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calc_app.views.calc_page" title="Ссылка на это определение">¶</a></dt>
+<dd><blockquote>
+<div><p>Складывает числа (first, second) из запроса и возвращает результат пользователю в поле шаблона {{summa}}</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „calc.html“, context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="expression">
+<h3>expression<a class="headerlink" href="#expression" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="expression.views.expression_page">
+<span class="sig-prename descclassname"><span class="pre">expression.views.</span></span><span class="sig-name descname"><span class="pre">expression_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#expression.views.expression_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Случайно выбирает операции(+, -) и числа(от 10 до 99) и записывает результат в <a class="reference internal" href="#calchistory"><span class="std std-ref">CalcHistory</span></a>
+:param request:
+:return: render(request, „expression.html“, context)</p>
+</dd></dl>
+
+</section>
+<section id="new">
+<h3>new<a class="headerlink" href="#new" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="new.views.new_page">
+<span class="sig-prename descclassname"><span class="pre">new.views.</span></span><span class="sig-name descname"><span class="pre">new_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#new.views.new_page" title="Ссылка на это определение">¶</a></dt>
+<dd><blockquote>
+<div><p>Принимает из параметров запроса 7 аргументов: 4 числа и 3 операции(+, -)</p>
+<p>Записывает результат в <a class="reference internal" href="#calchistory"><span class="std std-ref">CalcHistory</span></a></p>
+<p>Если всё хорошо status = «пример добавлен»</p>
+<p>Если не 7 аргументов status = «должно быть 7 аргументов»</p>
+<p>Если недопустимые аргументы status = f»недопустимый аргумент: {i} - „{numbers[i]}“не служебное слово(a,s), и не число(int)»</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „new.html“, context={«status»: status})</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="history">
+<h3>history<a class="headerlink" href="#history" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="history.views.history_page">
+<span class="sig-prename descclassname"><span class="pre">history.views.</span></span><span class="sig-name descname"><span class="pre">history_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#history.views.history_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отображает все <a class="reference internal" href="#calchistory"><span class="std std-ref">CalcHistory</span></a> пользователю</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „history.html“, {„cals_history“: cals_history})</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="delete">
+<h3>delete<a class="headerlink" href="#delete" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="delete.views.delete_page">
+<span class="sig-prename descclassname"><span class="pre">delete.views.</span></span><span class="sig-name descname"><span class="pre">delete_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete.views.delete_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Удаляет последнюю запись из <a class="reference internal" href="#calchistory"><span class="std std-ref">CalcHistory</span></a></p>
+<p>если всё хорошо status = «Удалено последнее выражение из истории»</p>
+<p>или status = «нет записей для удаления»</p>
+<p>неизвестная ошибка status = «что-то пошло не так :(»</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „delete.html“, context={«status»: status})</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="clear">
+<h3>clear<a class="headerlink" href="#clear" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="clear.views.clear_page">
+<span class="sig-prename descclassname"><span class="pre">clear.views.</span></span><span class="sig-name descname"><span class="pre">clear_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#clear.views.clear_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Очищает историю вычислений(<a class="reference internal" href="#calchistory"><span class="std std-ref">CalcHistory</span></a>) с ulr(/expression и /new).</p>
+<p>Если всё успешно status = «История выражений очищена» иначе</p>
+<p>Если что-то пошло не так status =  «что-то не захотелось удаляться :)»</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, «clear.html», context={«status»: status})</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="first-app">
+<h3>first_app<a class="headerlink" href="#first-app" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="first_app.views.index_page">
+<span class="sig-prename descclassname"><span class="pre">first_app.views.</span></span><span class="sig-name descname"><span class="pre">index_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#first_app.views.index_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отображает главную страницу и количество страниц на сайте не считая /admin</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, «index.html», context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="str2words">
+<h3>str2words<a class="headerlink" href="#str2words" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="str2words.views.str2words_page">
+<span class="sig-prename descclassname"><span class="pre">str2words.views.</span></span><span class="sig-name descname"><span class="pre">str2words_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#str2words.views.str2words_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Принимает строку и разбирает её на слова, цифры и символы, записывает результат в <a class="reference internal" href="#word"><span class="std std-ref">Word</span></a></p>
+<p>Для подсчёта цифр используется функция count_numbers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „words.html“, context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="str2words.views.count_numbers">
+<span class="sig-prename descclassname"><span class="pre">str2words.views.</span></span><span class="sig-name descname"><span class="pre">count_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#str2words.views.count_numbers" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="str-history">
+<h3>str_history<a class="headerlink" href="#str-history" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="str_history.views.str_history">
+<span class="sig-prename descclassname"><span class="pre">str_history.views.</span></span><span class="sig-name descname"><span class="pre">str_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#str_history.views.str_history" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выводит все <a class="reference internal" href="#word"><span class="std std-ref">Word</span></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „str_history.html“, context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="time-app">
+<h3>time_app<a class="headerlink" href="#time-app" title="Ссылка на этот заголовок">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="time_app.views.time_page">
+<span class="sig-prename descclassname"><span class="pre">time_app.views.</span></span><span class="sig-name descname"><span class="pre">time_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#time_app.views.time_page" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выводит время в формате</p>
+<ol class="arabic simple">
+<li><p>день/месяц/год</p></li>
+<li><p>час/минуты/секунды</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong></p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>render(request, „time.html“, context)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">project_Docs</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.html">Документация пользователя</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Документация разработчика</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Модели</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#view">view функции</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.html" title="предыдущая глава">Документация пользователя</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Alexander.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/Документация разработчика.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

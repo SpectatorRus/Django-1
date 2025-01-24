@@ -7,7 +7,6 @@ from clicker.models import ClickerData
 @login_required
 def clicker_page(request):
     if request.POST:
-        # print(request.POST)
         hp = int(request.POST["hp"].split(' ')[1])
         iq = int(request.POST["iq"].split(' ')[1])
         happiness = int(request.POST["happiness"].split(' ')[1])
@@ -33,5 +32,4 @@ def clicker_page(request):
         }
     except ObjectDoesNotExist:
         pass
-
     return render(request, 'clicker.html', context)

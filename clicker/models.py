@@ -4,7 +4,10 @@ from django.db import models
 
 # Create your models here.
 class ClickerData(models.Model):
-    id = models.IntegerField(primary_key=True)
+    """
+    Используется в **/clicker** для сохранения результатов пользователя. \n
+    hp, iq, happiness - числа \n
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     hp = models.IntegerField()
     iq = models.IntegerField()

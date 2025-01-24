@@ -12,6 +12,11 @@ def subtract(a, b):
 
 
 def expression_page(request):
+    """
+    Случайно выбирает операции(+, -) и числа(от 10 до 99) и записывает результат в :ref:`CalcHistory`
+    :param request:
+    :return: render(request, 'expression.html', context)
+    """
     operations_choice_list = [add, subtract]
     operation = [random.choice(operations_choice_list), random.choice(operations_choice_list),
                  random.choice(operations_choice_list)]

@@ -25,6 +25,12 @@ def count_numbers(data: list) -> list[int | list[int]]:
 # Create your views here.
 @login_required
 def str2words_page(request):
+    """
+    Принимает строку и разбирает её на слова, цифры и символы, записывает результат в :ref:`Word` \n
+    Для подсчёта цифр используется функция count_numbers \n
+    :param request:
+    :return: render(request, 'words.html', context)
+    """
     context = {
         'str2words_form': Str2Words()
     }

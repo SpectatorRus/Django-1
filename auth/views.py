@@ -2,8 +2,16 @@ from django.shortcuts import render, redirect
 from auth.forms import Auth
 from django.contrib.auth import authenticate, login
 
+
 # Create your views here.
 def auth_page(request):
+    """
+    Принимает из формы Auth username, password и если пользователь с такими данными существует, регестрирует и
+    перенаправляет на основную страницу
+
+    :param request:
+    :return: redirect('/')|render(request, 'login.html', context)
+    """
     context = {
         "form": Auth()
     }
@@ -28,4 +36,3 @@ def auth_page(request):
         print(context)
         context["status"] = "пользователь не найден"
         return render(request, 'login.html', context)
-

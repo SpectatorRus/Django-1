@@ -1,0 +1,103 @@
+Документация разработчика
+=========================
+
+Модели
+------
+
+.. _CalcHistory:
+CalcHistory
+^^^^^^^^^^^
+
+.. automodule:: expression.models
+    :members:
+
+.. _Word:
+Word
+^^^^
+
+.. automodule:: str2words.models
+    :members:
+
+.. _ClickerData:
+ClickerData
+^^^^^^^^^^^
+
+.. automodule:: clicker.models
+    :members:
+
+
+view функции
+------------
+
+auth
+^^^^
+
+.. autofunction:: auth.views.auth_page
+
+
+.. code-block:: python
+
+    class Auth(forms.Form):
+    username = forms.CharField(label="username",  max_length=50)
+    password = forms.CharField(label="password",  max_length=50)
+
+
+logout
+^^^^^^
+
+.. autofunction:: logout.views.logout_page
+
+calc_app
+^^^^^^^^
+
+.. autofunction:: calc_app.views.calc_page
+
+
+expression
+^^^^^^^^^^
+
+
+.. autofunction:: expression.views.expression_page
+
+new
+^^^
+
+.. autofunction:: new.views.new_page
+
+
+history
+^^^^^^^
+
+.. autofunction:: history.views.history_page
+
+delete
+^^^^^^
+
+.. autofunction:: delete.views.delete_page
+
+clear
+^^^^^
+
+.. autofunction:: clear.views.clear_page
+
+first_app
+^^^^^^^^^
+
+.. autofunction:: first_app.views.index_page
+
+str2words
+^^^^^^^^^
+
+.. autofunction:: str2words.views.str2words_page
+
+.. autofunction:: str2words.views.count_numbers
+
+str_history
+^^^^^^^^^^^
+
+.. autofunction:: str_history.views.str_history
+
+time_app
+^^^^^^^^
+
+.. autofunction:: time_app.views.time_page
